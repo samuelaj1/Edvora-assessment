@@ -5,7 +5,7 @@ This is a [Next.js] assessment project from Edvora.
 First, run the development server:
 
 ```bash
-npm run dev
+next dev
 # or
 yarn dev
 ```
