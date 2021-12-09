@@ -45,6 +45,18 @@ export default function Home({}) {
     return data;
   }
 
+  function formatDate(date) {
+    let date_val = new Date("2021-03-05T22:40:16.759Z");
+    var month =
+      Number(date_val.getMonth()) + 1 < 10
+        ? "0" + (Number(date_val.getMonth()) + 1)
+        : Number(date_val.getMonth()) + 1; //months from 1-12
+    var day =
+      date_val.getDay() < 10 ? "0" + date_val.getDay() : date_val.getDay();
+    var year = date_val.getFullYear();
+    return year + ":" + month + ":" + day;
+  }
+
   //handle all select change
 
   function handleStateChange(event) {
@@ -265,7 +277,9 @@ export default function Home({}) {
                                             <div className="dark-text">
                                               Date:{" "}
                                               <span className="date-text">
-                                                {grouped_product["time"]}
+                                                {formatDate(
+                                                  grouped_product["time"]
+                                                )}
                                               </span>
                                             </div>
                                           </div>
