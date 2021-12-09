@@ -165,7 +165,7 @@ export default function Home({}) {
           <div className="col-md-2">
             <div className="card">
               <div className="card-body">
-                <h3>Filters</h3>
+                <h3 style={{fontSize:'20px',fontStyle: 'normal'}}>Filters</h3>
                 <hr className="hr-light" />
                 <select
                   className="form-control mb-3 mt-4"
